@@ -1,0 +1,66 @@
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.draggable_list{
+    border: 2px solid black;
+    list-style-type: none;
+    color: ver(--text-color);
+    padding: 0;
+}
+.draggable_list li{
+    display: flex;
+    flex: 1;
+}
+.draggable_list li:not(:last-of-type){
+    border: 1px solid black;
+}
+.draggable_list .number{
+    background-color: hsl(0, 19%, 92%);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 40PX;
+}
+.draggable_list .person_name{
+    margin: 0 20px 0 0;
+}
+.draggable{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.draggable_list li.right .person_name{
+    color: green;
+}
+.draggable_list li.Wrong .person_name{
+    color: red;
+}
+.check_btn{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+}
+.check_btn:active{
+    transform: scale(0.96);
+}
+.check_btn{
+    outline: none;
+}
