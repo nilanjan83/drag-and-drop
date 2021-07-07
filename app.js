@@ -25,6 +25,7 @@ function creatlist(){
     .sort((a,b) => a.sort-b.sort)
     .forEach((person,index) => {
        // creat the list item
+       console.log(person)
        const listitem = document.createElement('li');
        
        listitem.setAttribute("deta-index",index);
@@ -45,7 +46,7 @@ function addEventListeners(){
     let draggables = document.querySelectorAll('.draggable');
     let dragListItem = document.querySelectorAll('.draggable_list li');
     draggables.forEach(draggable =>{
-        draggable.addEventListener('dragstart', dragStrt);
+        draggable.addEventListener('dragstart', dragStart);
     })
     dragListItem.forEach(item =>{
         item.addEventListener('dragover' , dragOver);
